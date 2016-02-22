@@ -1,0 +1,1 @@
+﻿E đã làm như yêu cầu, chỉ thiếu mỗi phần địch nhả đạn là chưa làm được ạ. 
