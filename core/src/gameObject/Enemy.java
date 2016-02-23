@@ -9,7 +9,7 @@ import com.badlogic.gdx.math.Vector2;
 import textureStatic.StaticTextute;
 
 public class Enemy {
-	static Sprite em[]=new Sprite[4];
+	//public static Sprite em[]=new Sprite[4];
 	public Random r;//=new Random(System.nanoTime());
 	
 	Vector2 position;
@@ -17,20 +17,15 @@ public class Enemy {
 	public Rectangle bounds;
 	
 	//float velocity;
-	static{
-		em[0]=new Sprite(StaticTextute.em1);
-		em[1]=new Sprite(StaticTextute.em2);
-		em[2]=new Sprite(StaticTextute.em3);
-		em[3]=new Sprite(StaticTextute.em4);
-		for (int i = 0; i < em.length; i++) {
-			em[i].setSize(100, 100);
-		}
-	}
+	
 	
 	
 	public Enemy(int i) {
 		int d=i%4;
-		s=em[d];
+		
+		
+		s=new Sprite(StaticTextute.enemy[d]);
+		s.setSize(100, 100);
 		bounds=new Rectangle(0,0,100,100);
 		position=new Vector2();
 		

@@ -3,13 +3,16 @@ package stateMan;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
 import gameObject.Background;
 import gameObject.Enemy;
 import gameObject.Plane;
+import textureStatic.StaticTextute;
 
 public class PlayState extends State{
 	//OrthographicCamera cam;
@@ -52,8 +55,9 @@ public class PlayState extends State{
 			em[i]=new Enemy(i);
 			em[i].setPosition(120*(i)+30, 300);
 		}
-		
-		
+		//em[0].setS(Enemy.em[0]);
+		/*em[0].setS(new Sprite(StaticTextute.em1));
+		em[0].getS().setSize(100, 100);*/
 		//plane.getBullets().add(b);
 		
 		
@@ -87,10 +91,8 @@ public class PlayState extends State{
 			//System.out.println("Đã bắn");
 		}
 		if(Gdx.input.isKeyJustPressed(Input.Keys.G)){
-			for (int i = 0; i < plane.getListBullet().length; i++) {
-				if(plane.getIsRunning()[i]==true){
-					System.out.println(plane.getListBullet()[i].bounds.x+" "+plane.getListBullet()[i].bounds.y);
-				}
+			for (int i = 0; i < emIsDead.length; i++) {
+				System.out.println(emIsDead[i]);
 			}
 		}
 		
@@ -194,6 +196,9 @@ public class PlayState extends State{
 			}
 			
 		}
+		
+		//em[0].getS().getTexture();
+		
 		score.draw(sb,"Score: " +Integer.toString(diem), 20, 450);
 		blood.draw(sb, "HP: "+Integer.toString(hp), 20, 420);
 		sb.end();
