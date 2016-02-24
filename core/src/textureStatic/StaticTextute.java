@@ -17,7 +17,7 @@ public class StaticTextute {
 	public static Texture bg=new Texture("night-sky-stars.jpg");
 	public static Texture playBtn=new Texture("playBtn.png");
 	public static Texture bullet=new Texture("bullet.png");
-	
+	public static Texture bomb=new Texture("bomb.png");
 	
 	
 }

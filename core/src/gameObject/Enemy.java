@@ -15,10 +15,12 @@ public class Enemy {
 	Vector2 position;
 	Sprite s;
 	public Rectangle bounds;
+	//Bomb bomb;
 	
+	boolean isDroping;
 	//float velocity;
 	
-	
+	float timeToSpawn=0;
 	
 	public Enemy(int i) {
 		int d=i%4;
@@ -29,7 +31,13 @@ public class Enemy {
 		bounds=new Rectangle(0,0,100,100);
 		position=new Vector2();
 		
+		
+		//bomb=new Bomb(s.getX()+s.getWidth()/2, s.getY());
+		//bomb.isFalling=false;
+		
+		
 	}
+	
 	public void setPosition(float x, float y){
 		position.set(x, y);
 		bounds.setPosition(x, y);
@@ -47,4 +55,7 @@ public class Enemy {
 	public Rectangle getBounds(){
 		return bounds;
 	}
+	
+	
+	
 }
